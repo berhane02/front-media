@@ -5,6 +5,7 @@ import Layout from './componets/layout';
 import {Routes, Route} from 'react-router-dom';
 import Home from './componets/home/Home';
 import Header from './componets/header/Header';
+import Trailer from './componets/trailer/Trailer';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route path="/" element={<Home movies={movies}/>}></Route>
+            <Route path="/Trailer/:ytTrailerId" element={<Trailer/>}></Route>
 
           </Route>
         </Routes>
