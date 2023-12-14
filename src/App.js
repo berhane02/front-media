@@ -12,15 +12,13 @@ function App() {
 
   const [movies, setMovies] = useState();
   const [movie, setMovie] = useState();
-  const [reviews, setReviews] = useState();
+  const [reviews, setReviews] = useState([]);
 
 
   const getMovies = async () => {
     try {
       const response = await api.get("api/v1/movies");
-      console.log(response.data)
       setMovies(response.data);
-      
     } catch (error) {
       console.log(error)
     }
