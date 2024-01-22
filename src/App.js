@@ -8,6 +8,7 @@ import Header from './componets/header/Header';
 import Trailer from './componets/trailer/Trailer';
 import Reviews from './componets/reviews/Reviews';
 import NotFound from './componets/notFound/NotFound';
+import { listOfMovies } from './componets/caching/listOfMovies';
 
 function App() {
 
@@ -37,7 +38,9 @@ function App() {
         console.log(error)
     }
   }
+  
   useEffect(()=>{
+    setMovie(listOfMovies)
     getMovies();
   },[])
   return (
